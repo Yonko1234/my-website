@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Професионални услуги & Консултиране</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #2b6cb0;
+            --bg-light: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Навигация */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #90cdf4;
+        }
+
+        /* Общи стилове за секциите */
+        section {
+            padding: 6rem 2rem 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        /* Стилове за хоризонталните банери */
+        .section-banner {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Секция За мен с профилна снимка */
+        .about-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        /* Начална секция */
+        #hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 7rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        /* Секция Обучения */
+        .program-badge {
+            display: inline-block;
+            background-color: #ebf8ff;
+            color: var(--accent-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Секция Софтуер */
+        .demo-box {
+            background-color: #ebf8ff;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Футър */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Адаптивност за мобилни устройства */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .nav-links li {
+                margin-left: 0;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-img {
+                width: 160px;
+                height: 160px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding-top: 8rem;
+            }
+
+            .section-banner {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Хоризонтално меню -->
+    <header>
+        <nav>
+            <div class="logo">Професионални Услуги</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Начало</a></li>
+                <li><a href="#credit">Кредитно консултиране</a></li>
+                <li><a href="#training">Обучение по продажби</a></li>
+                <li><a href="#outsourced-sales">Изнесени продажби</a></li>
+                <li><a href="#software">Софтуерни услуги</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. Увод & За мен -->
+    <section id="hero">
+        <h1 class="hero-title">Експертни решения за Вашия бизнес и финанси</h1>
+        <p class="hero-subtitle">Индивидуални консултации, търговски обучения, изнесени продажби и софтуерен анализ.</p>
+        
+        <div class="card">
+            <h2 class="section-title">За мен</h2>
+            <div class="about-container">
+                <!-- Заменете 'profile.jpg' с името на вашата снимка -->
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Снимка на консултанта" class="profile-img">
+                <div>
+                    <p class="about-text">
+                        Здравейте! Помагам на бизнеси и частни клиенти да оптимизират финансовите си решения, да развият търговския си потенциал и да внедрят ефективни софтуерни инструменти. С опит в кредитното консултиране, управлението на продажби и анализа на бизнес процеси, предлагам практични решения с фокус върху реални резултати.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#credit" class="btn">Кредитно консултиране</a>
+                        <a href="#training" class="btn btn-outline">Обучения по продажби</a>
+                        <a href="#outsourced-sales" class="btn btn-outline">Изнесени продажби</a>
+                        <a href="#software" class="btn btn-outline">Софтуерни решения</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Кредитно консултиране -->
+    <section id="credit">
+        <h2 class="section-title">Кредитно консултиране</h2>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80" alt="Кредитно консултиране банер" class="section-banner">
+            <p>
+                Намирането на оптимални финансови условия изисква познаване на пазара и индивидуален подход. Предлагам пълен набор от услуги за физически и юридически лица:
+            </p>
+            <ul style="margin: 1rem 0 1rem 1.5rem;">
+                <li>Анализ на финансовите нужди и кредитоспособността.</li>
+                <li>Сравнение на оферти от водещи банкови и финансови институции.</li>
+                <li>Съдействие при договаряне на лизингови и кредитни условия.</li>
+                <li>Цялостна подкрепа – от подготовката на документите до финализиране на сделката.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 3. Обучение по продажби -->
+    <section id="training">
+        <h2 class="section-title">Обучение по продажби</h2>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Обучения по продажби банер" class="section-banner">
+            <span class="program-badge">Авторска програма: Sell and feel Well</span>
+            <p>
+                Продажбите не са просто транзакция, а изграждане на доверие и стойност. Програмата <strong>"Sell and feel Well"</strong> е съвременен тренинг, насочен към търговски екипи и самостоятелни професионалисти.
+            </p>
+            <ul style="margin: 1rem 0 1rem 1.5rem;">
+                <li><strong>Устойчиви техники за преговори:</strong> Водене на диалог без излишен натиск.</li>
+                <li><strong>Управление на възражения:</strong> Превръщане на отказите във възможности.</li>
+                <li><strong>Психология на купувача:</strong> Разбиране на нуждите и изграждане на дългосрочни взаимоотношения.</li>
+                <li><strong>Лична ефективност:</strong> Как да продавате успешно, запазвайки вътрешен баланс и увереност.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 4. Изнесена търговска дейност (Outsourced Sales) -->
+    <section id="outsourced-sales">
+        <h2 class="section-title">Изнесена търговска дейност</h2>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Изнесена търговска дейност банер" class="section-banner">
+            <p>
+                Партнирам си с подбрани компании с доказано високо качество, като поемам цялостното оперативно водене и развитие на техния търговски процес.
+            </p>
+            <ul style="margin: 1rem 0 1rem 1.5rem;">
+                <li><strong>Таргетиране и B2B бази данни:</strong> Дефиниране на правилния профил клиенти и изграждане на целеви бази данни.</li>
+                <li><strong>Проспективно свързване:</strong> Провеждане на таргетирани входящи и изходящи обаждания.</li>
+                <li><strong>Срещи и преговори:</strong> Организиране и лично участие в търговски срещи и презентации.</li>
+                <li><strong>CRM управление:</strong> Поддържане, актуализация и подробно проследяване на цялата комуникация в CRM система.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 5. Софтуерни услуги -->
+    <section id="software">
+        <h2 class="section-title">Софтуерни услуги</h2>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Софтуерни услуги банер" class="section-banner">
+            <p>
+                Правилният софтуер автоматизира рутината и оптимизира работния процес. Предлагам услуги по <strong>бизнес анализ</strong> и <strong>имплементация</strong> на дигитални инструменти, съобразени с конкретните нужди на вашия бизнес.
+            </p>
+            
+            <div class="demo-box">
+                <h3>Тествайте моя CRM софтуер</h3>
+                <p style="margin: 0.5rem 0 1rem 0;">
+                    Разработих персонализирана CRM система, предназначена да улесни проследяването на клиенти, сделки и задачи.
+                </p>
+                <!-- Заменете # с реалния адрес към демото -->
+                <a href="#" target="_blank" class="btn">Вход към CRM Демо</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Всички права запазени.</p>
+    </footer>
+
+</body>
+</html>
