@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html_content = '''<!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
@@ -32,13 +32,14 @@
             background-color: var(--bg-light);
         }
 
-        /* Навигация */
+        /* Навигация с фоново изображение (Банер) */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: var(--primary-color);
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             z-index: 1000;
         }
@@ -53,10 +54,10 @@
         }
 
         .logo {
-         : #ffffff !important;
-    font-size: 1.2rem;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+            color: #ffffff !important;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .nav-links {
@@ -260,7 +261,7 @@
 </head>
 <body>
 
-    <!-- Хоризонтално меню -->
+    <!-- Хоризонтално меню с фонов банер -->
     <header>
         <nav>
             <div class="logo">Професионални услуги</div>
@@ -282,8 +283,7 @@
         <div class="card">
             <h2 class="section-title">За мен</h2>
             <div class="about-container">
-                <!-- Заменете 'profile.jpg' с името на вашата снимка -->
-                <img src="my-photo.jpg" alt="Снимка на консултанта" class="profile-img">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Снимка на консултанта" class="profile-img">
                 <div>
                     <p class="about-text">
                         Здравейте! Помагам на бизнеси и частни клиенти да оптимизират финансовите си решения, да развият търговския си потенциал и да внедрят ефективни софтуерни инструменти. С опит в кредитното консултиране, управлението на продажби и анализа на бизнес процеси, предлагам практични решения с фокус върху реални резултати.
@@ -365,7 +365,6 @@
                 <p style="margin: 0.5rem 0 1rem 0;">
                     Разработих персонализирана CRM система, предназначена да улесни проследяването на клиенти, сделки и задачи.
                 </p>
-                <!-- Заменете # с реалния адрес към демото -->
                 <a href="#" target="_blank" class="btn">Вход към CRM Демо</a>
             </div>
         </div>
@@ -377,3 +376,9 @@
 
 </body>
 </html>
+'''
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("File index.html updated successfully with correct syntax.")
