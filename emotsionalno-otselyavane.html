@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Емоционално оцеляване в продажбите — Йонко Кръстев</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #2D3748;
+            background-color: #F7FAFC;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1A365D 0%, #2A4365 100%);
+            color: #FFFFFF;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #D69E2E;
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: #E2E8F0;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro-box {
+            background-color: #EBF8FF;
+            border-left: 4px solid #3182CE;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+
+        .intro-box h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2B6CB0;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        h2.section-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #1A365D;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .program-part {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .program-part h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2C5282;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: #4A5568;
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #319795;
+            font-weight: bold;
+        }
+
+        .highlights {
+            display: table;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .highlight-item {
+            display: table-cell;
+            width: 33.33%;
+            padding: 15px;
+            vertical-align: top;
+        }
+
+        .highlight-inner {
+            background: #F7FAFC;
+            border: 1px solid #EDF2F7;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .highlight-inner h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2D3748;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .guarantee-box {
+            background-color: #FEEBC8;
+            border: 1px solid #FBD38D;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 35px 0;
+            text-align: justify;
+        }
+
+        .guarantee-box h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #9C4221;
+            margin-bottom: 10px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: #2B6CB0;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #1A365D;
+        }
+
+        .instructor-card {
+            background: #EDF2F7;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+        .instructor-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1A365D;
+            margin-bottom: 10px;
+        }
+
+        .cta-section {
+            background: #1A365D;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .phone {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #D69E2E;
+            margin-top: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            margin-top: 15px;
+            color: #CBD5E0;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">Практически интензив за търговци</span>
+        <h1>Емоционално оцеляване в продажбите</h1>
+        <p class="subtitle">Управление на стреса, превенция на бърнаут + 1 месец менторинг</p>
+    </header>
+
+    <div class="content">
+        <div class="intro-box">
+            <h2>Как да съхраним енергията и мотивацията си?</h2>
+            <p>Продажбите и обслужването на клиенти са сред професиите с най-високо ниво на бърнаут. Постоянният натиск за таргети, отказът от страна на клиенти и конфликтните ситуации изчерпват емоционалния ресурс. Този трейнинг не ви учи как да работите „по-здраво“, а как да работите <strong>по-устойчиво</strong> — като запазите здравето, емпатията и високото си ниво на резултати.</p>
+        </div>
+
+        <h2 class="section-title">Основни акценти</h2>
+        <div class="highlights">
+            <div class="highlight-item">
+                <div class="highlight-inner">
+                    <h4>Защита от бърнаут</h4>
+                    <p>Ранно разпознаване на симптомите на изтощение и техники за бързо възстановяване.</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-inner">
+                    <h4>Устойчивост на откази</h4>
+                    <p>Пренастройване на нагласата спрямо отказите и трудното поведение на клиентите.</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-inner">
+                    <h4>Бутиков формат</h4>
+                    <p>Работа в малка група до 5 души за пълно фокусиране върху вашата среда и казуси.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Програма на обучението</h2>
+
+        <div class="program-part">
+            <h3>Част 1: Физиология и психология на стреса в продажбите</h3>
+            <ul>
+                <li><strong>Анатомия на напрежението:</strong> Как тялото и умът реагират на гоненето на таргети и отказът.</li>
+                <li><strong>Филтър на реакцията:</strong> Разграничаване на професионалните предизвикателства от личната стойност.</li>
+                <li><strong>Вътрешният диалог:</strong> Преодоляване на синдрома на прегаряне и умората от комуникация.</li>
+            </ul>
+        </div>
+
+        <div class="program-part">
+            <h3>Част 2: Овладяване на трудни клиенти и конфликтни разговори</h3>
+            <ul>
+                <li><strong>Психологически щит:</strong> Техники за заземяване и емоционално дистанциране от чуждия гняв.</li>
+                <li><strong>Неутрализиране на атаката:</strong> Управление на агресивен или взискателен тон с уважение и твърдост.</li>
+                <li><strong>Поставяне на здравословни граници:</strong> Как да пазим личната си енергия, без да губим сделки.</li>
+            </ul>
+        </div>
+
+        <div class="program-part">
+            <h3>Част 3: Техники за незабавна регулация и микро-възстановяване</h3>
+            <ul>
+                <li><strong>Бърз рестарт между разговорите:</strong> Микро-паузи, соматични и дихателни упражнения за сваляне на пулса.</li>
+                <li><strong>Управление на фокуса:</strong> Задържане на висока мотивация дори след последователни откази.</li>
+                <li><strong>Устойчиво темпо:</strong> Изграждане на ежедневен ритъм, който предотвратява хронологичното изтощение.</li>
+            </ul>
+        </div>
+
+        <div class="program-part page-break">
+            <h3>Част 4: Хигиена на живота и затваряне на работния ден</h3>
+            <ul>
+                <li><strong>Възстановяване след работа:</strong> Ритуали за изключване от търговския режим и превключване към личния живот.</li>
+                <li><strong>Изграждане на емоционална устойчивост (Resilience):</strong> Дългосрочна стратегия за баланс между резултати и здраве.</li>
+                <li><strong>Личен план за действие:</strong> Индивидуална карта за реакция в критични и високостресови ситуации.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">1 Месец последващ менторинг</h2>
+        <p>Промяната изисква време и практика. В рамките на един месец след присъствения интензив провеждаме 1-2 индивидуални онлайн и/или присъствени срещи седмично. В тях проследяваме прилагането на техниките в реални търговски ситуации и надграждаме Вашата устойчивост. <em>(Конкретният план се изготвя след предварително интервю)</em></p>
+
+        <div class="guarantee-box">
+            <h3>Финансова гаранция: Гъвкаво плащане</h3>
+            <p><strong>1. Депозит:</strong> 10-20% от общата цена по преценка на възложителя.</p>
+            <p><strong>2. Остатък:</strong> Доплаща се САМО ако след края на 1-месечния менторинг виждате ясна промяна в нивата си на стрес, спокойствие и търговски резултати.</p>
+        </div>
+
+        <!-- Бутон за връщане -->
+        <div style="text-align: center; margin: 35px 0;">
+            <a href="index.html#training" class="btn-back">← Към всички обучения</a>
+        </div>
+
+        <div class="instructor-card">
+            <h3>За лектора</h3>
+            <p><strong>Йонко Кръстев</strong> е бизнес консултант и утвърден мениджър с над 20 години лидерски опит в продажбите, финансовия сектор и внедряването на софтуерни решения[cite: 1]. Преминал през позиции от първа линия до Търговски директор и Заместник изпълнителен директор[cite: 1].</p>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Запазете своето място</h2>
+        <p class="phone">+359 887 57 36 26 — Йонко Кръстев</p>
+        <p class="quote">„Успешният търговец не е този, който никога не се уморява, а този, който знае как да се възстановява.“</p>
+    </div>
+</div>
+
+</body>
+</html>

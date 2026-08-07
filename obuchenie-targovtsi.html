@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продавай и се чувствай добре — Йонко Кръстев</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #2D3748;
+            background-color: #F7FAFC;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1A365D 0%, #2A4365 100%);
+            color: #FFFFFF;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #D69E2E;
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: #E2E8F0;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro-box {
+            background-color: #EBF8FF;
+            border-left: 4px solid #3182CE;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+
+        .intro-box h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2B6CB0;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        h2.section-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #1A365D;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .program-part {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .program-part h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2C5282;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: #4A5568;
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #319795;
+            font-weight: bold;
+        }
+
+        .highlights {
+            display: table;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .highlight-item {
+            display: table-cell;
+            width: 33.33%;
+            padding: 15px;
+            vertical-align: top;
+        }
+
+        .highlight-inner {
+            background: #F7FAFC;
+            border: 1px solid #EDF2F7;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .highlight-inner h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2D3748;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .guarantee-box {
+            background-color: #FEEBC8;
+            border: 1px solid #FBD38D;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 35px 0;
+            text-align: justify;
+        }
+
+        .guarantee-box h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #9C4221;
+            margin-bottom: 10px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: #2B6CB0;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #1A365D;
+        }
+
+        .instructor-card {
+            background: #EDF2F7;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+        .instructor-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1A365D;
+            margin-bottom: 10px;
+        }
+
+        .cta-section {
+            background: #1A365D;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .phone {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #D69E2E;
+            margin-top: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            margin-top: 15px;
+            color: #CBD5E0;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">Бутиков присъствен интензив</span>
+        <h1>Продавай и се чувствай добре</h1>
+        <p class="subtitle">Трансформирай продажбите от стрес в удоволствие — 1 ден + 1 месец личен менторинг</p>
+    </header>
+
+    <div class="content">
+        <div class="intro-box">
+            <h2>Защо това не е поредното теоретично обучение?</h2>
+            <p>Ако сте начинаещи или имате малък опит, вероятно се чувствате притиснати от нуждата да „продавате на всяка цена“. Този курс е създаден, за да премахне това напрежение. Тук не учим агресивни скриптове, а развиваме вашата Емоционална интелигентност (EQ) и търговски нюх.</p>
+        </div>
+
+        <h2 class="section-title">Основни акценти</h2>
+        <div class="highlights">
+            <div class="highlight-item">
+                <div class="highlight-inner">
+                    <h4>Психология на спокойствието</h4>
+                    <p>Как да владеете емоциите си и да не приемате „Не“-то лично.</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-inner">
+                    <h4>Лесни техники</h4>
+                    <p>Прости, но мощни похвати за комуникация, които работят веднага.</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-inner">
+                    <h4>Бутиков формат</h4>
+                    <p>Максимум до 5 души за индивидуална работа по вашия казус и продукт.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Програма на обучението</h2>
+
+        <div class="program-part">
+            <h3>Модул 1: Подготовка, майндсет и грабващо послание</h3>
+            <ul>
+                <li><strong>Фундамент:</strong> Продукт, Пазар и правилната търговска нагласа.</li>
+                <li><strong>Силно послание:</strong> Създаване на структурирано и въздействащо представяне.</li>
+                <li><strong>Магнитно присъствие:</strong> Изграждане на мигновено доверие и ефективна комуникация без стрес.</li>
+            </ul>
+        </div>
+
+        <div class="program-part">
+            <h3>Модул 2: Психология на затварянето и работа с откази</h3>
+            <ul>
+                <li><strong>Closing техники:</strong> Психология на затварянето на сделката с лекота.</li>
+                <li><strong>Устойчивост при възражения:</strong> Работа с откази без понасяне на емоционални щети.</li>
+                <li><strong>Запазване на мотивацията:</strong> Разбиране на биологията на стреса в продажбите.</li>
+            </ul>
+        </div>
+
+        <div class="program-part page-break">
+            <h3>Модул 3: Практически симулации и ролеви игри</h3>
+            <ul>
+                <li><strong>Симулация на терен:</strong> Практически симулации и разиграване на реални казуси.</li>
+                <li><strong>Интеграция:</strong> Превръщане на техниките в естествен навик при преговори.</li>
+                <li><strong>Програмиране на успеха:</strong> Лична стратегия за последващото приложение.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">1 Месец последващ менторинг</h2>
+        <p>Обучението не приключва с края на деня. Когато започнете да прилагате наученото в реална среда, провеждаме 2 индивидуални онлайн срещи (само вие и лекторът), за да анализираме вашите реални разговори, да коригираме грешките и да надграждаме резултатите с подкрепа точно когато имате най-голяма нужда. <em>(Конкретна програма се изготвя след интервю с участниците и мениджмънта)</em></p>
+
+        <div class="guarantee-box">
+            <h3>Финансова гаранция: Гъвкаво плащане</h3>
+            <p><strong>1. Депозит:</strong> Заплаща се малък процент от сумата при записване (за запазване на място в групата).</p>
+            <p><strong>2. Остатък:</strong> Доплаща се САМО ако след края на менторинга сте доволни от напредъка си и се чувствате уверени в уменията си.</p>
+        </div>
+
+        <h2 class="section-title">Какво ще постигнете?</h2>
+        <div class="program-part">
+            <ul>
+                <li>Ще спрете да се притеснявате от телефонната слушалка.</li>
+                <li>Ще знаете точно какво да кажете, без да звучите като „продавач“.</li>
+                <li>Ще изградите емоционална устойчивост, която ще ви пази от бърнаут.</li>
+                <li>Ще започнете да затваряте сделки с лекота и усмивка.</li>
+            </ul>
+        </div>
+
+        <!-- Бутон за връщане -->
+        <div style="text-align: center; margin: 35px 0;">
+            <a href="index.html#training" class="btn-back">← Към всички обучения</a>
+        </div>
+
+        <div class="instructor-card">
+            <h3>За лектора</h3>
+            <p><strong>Йонко Кръстев</strong> е бизнес консултант и утвърден мениджър с над 20 години лидерски опит в продажбите, финансовия сектор и внедряването на софтуерни решения. Бивш Търговски директор и Заместник изпълнителен директор на водеща лизингова компания. Авторската му програма съчетава практически опит с психология на преговорите.</p>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Запазете своето място</h2>
+        <p class="phone">+359 887 57 36 26 — Йонко Кръстев</p>
+        <p class="quote">„Продажбите са услуга, която предоставяте на света. Заслужавате да се чувствате добре, докато го правите.“</p>
+    </div>
+</div>
+
+</body>
+</html>
